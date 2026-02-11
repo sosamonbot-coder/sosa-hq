@@ -421,7 +421,7 @@
     const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
     return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
   }
-  const HASH = '1fc4ff1578be73496f62e8a2b3eede08e69b4fcd6e0cec63dc10ea0acfa65b43';
+  const HASH = '81979fc81f4ef2316aed92d4af60433af595541443f05559dfa981f0480498d0';
   async function unlock() {
     const pw = document.getElementById('lock-pw').value;
     const h = await hashPw(pw);
